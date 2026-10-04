@@ -1,8 +1,11 @@
 export default defineNuxtConfig({
   devtools: { enabled: false },
   compatibilityDate: "2025-07-15",
+  ssr: false,
   modules: ["@pinia/nuxt", "@vueuse/nuxt", "@nuxtjs/i18n"],
   css: ["~/assets/main.css"],
+  build: { transpile: ["vueuc", "naive-ui"] },
+  vite: { ssr: { noExternal: ["vueuc", "naive-ui"] } },
   i18n: {
     locales: [{ code: "zh", language: "zh-CN", name: "中文", file: "zh.json" }],
     defaultLocale: "zh",
