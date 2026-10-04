@@ -7,6 +7,8 @@
     "dev": "nuxt dev --host 0.0.0.0 --port 62015",
     "build": "nuxt build",
     "preview": "nuxt preview --port 62015",
+    "typecheck": "nuxt typecheck",
+    "test": "node --import tsx --experimental-loader ./scripts/alias-loader.mjs scripts/store.test.ts",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
@@ -25,6 +27,9 @@
     "zod": "^3.25.76"
   },
   "devDependencies": {
-    "typescript": "~5.9.2"
+    "jsdom": "^29.1.1",
+    "tsx": "^4.23.15",
+    "typescript": "~5.9.2",
+    "vue-tsc": "^3.3.12"
   }
 }

@@ -1,4 +1,6 @@
 export default defineNuxtConfig({
+  // 纯离线前端：localStorage / navigator 仅在浏览器可用，按客户端 SPA 渲染
+  ssr: false,
   devtools: { enabled: false },
   compatibilityDate: "2025-07-15",
   modules: ["@pinia/nuxt", "@vueuse/nuxt", "@nuxtjs/i18n"],
